@@ -1,40 +1,48 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-const heading = React.createElement("h1", {id: "heading-one", className: 'heading-zero'}, "Hello Namste React from React JS");
+
+//react element
+const reactHeading = React.createElement(
+  "h1",
+  { id: "heading" },
+  "Namaste React by nagaraju nali",
+);
+
+console.log(reactHeading);
+//JSX => React.createElement => React Element (js object) => HTML(DOM)
+const jsxHeading = (
+  <h1 id="heading" className="head" tabIndex="0">
+    Namaste React by nagaraju nali
+  </h1>
+);
+
+console.log(jsxHeading);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(heading);
+root.render(jsxHeading);
 
-/**
- * 
- * 
- * <div id="parent">
- *   <div id="child">
- *      <h1></h1>
- *      <h2></h2>
- *   </div>
- * <div id="child2">
- *      <h3></h3>
- *      <h4></h4>
- *   </div>
- * </div>
- */
+const ParagraphComponent = () => (
+    <p className="paragraph">   
+        This is a paragraph component in react functional component
+    </p>
+);
 
-const parent = React.createElement(
-    "div",
-    {id: "parent"},
-    [
-        React.createElement("div", {id: "child"}, 
-        [React.createElement("h1", {}, "Hello I am h1 tag from child div by nagaraju nali"), React.createElement("h2", {}, "Hello I am h2 tag from child div")]), 
+// react component
+// class based component: old way of writing code
+// function based component: modern way of writing code
 
-        React.createElement("div", {id: "child2"}, 
-        [React.createElement("h3", {}, "Hello I am h3 tag from child div"), React.createElement("h4", {}, "Hello I am h4 tag from child div")]),
-    ]
-    
-)
 
-root.render(parent)
+//This is called component composition, where we are using one component inside another component
 
-// to keep the code clean and redable we will be use the JSX and modern way of writing the code
-//JSX
+const HeadingComponent = () => (
+  
+    <div className="container">
+        <h1 className="heading">Namste react this is a react functional component</h1>
+        <ParagraphComponent/>
+    </div>
+
+);
+
+root.render(<HeadingComponent />);
+
