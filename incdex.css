@@ -50,3 +50,15 @@
 .restro-img {
     width: 100%;
 }
+
+.top-rated-restro {
+    margin: 30px 0;
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 14px;
+    font-weight: 500;
+}
