@@ -17,3 +17,10 @@
  *  - links
  *  - contact
  */
+
+ # React Hooks
+ Normal JS utility function
+ written by facbook developers
+ those hooks reside under react npm package
+ - useState() - Superpowerful State Vaiables
+ - useEffect()
