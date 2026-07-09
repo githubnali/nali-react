@@ -2,14 +2,25 @@ import RestroCard from "./RestroCard";
 
 import restroObj from "../utils/mockData";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Body = () => {
 
   //Local State Variable - Super powerful variable
   const [listedResturants, setListedResturants ] = useState(restroObj);
 
+  //https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.8017099&lng=77.7116112&collection=83633&tags=layout_CCS_NorthIndian&sortBy=&filters=&type=rcv2&offset=0&page_type=null
+  useEffect(() => {
+    fetchData()
+  }, []);
 
+  const fetchData = async () => {
+    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.8017099&lng=77.7116112&collection=83633&tags=layout_CCS_NorthIndian&sortBy=&filters=&type=rcv2&offset=0&page_type=null");
+
+    const json = await data.json();
+
+    console.log(json);
+  }
 
   //normal javascript variable
 //   let listedResturants = [
