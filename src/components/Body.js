@@ -15,11 +15,11 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.8017099&lng=77.7116112&collection=83633&tags=layout_CCS_NorthIndian&sortBy=&filters=&type=rcv2&offset=0&page_type=null");
+    const data = await fetch("https://namastedev.com/api/v1/listRestaurants");
 
     const json = await data.json();
 
-    console.log(json);
+    console.log(json.data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
   }
 
   //normal javascript variable
