@@ -62,3 +62,56 @@
     border-radius: 14px;
     font-weight: 500;
 }
+
+.shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.shimmer-card {
+      background-color: #f0f0f0;
+    width: 200px;
+    height: 350px;
+    padding: 10px;
+}
+
+.login-btn {
+    background-color: #000;
+    color: white;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.search {
+    display: flex;
+    gap: 20px;
+}
+
+input {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.search-btn {
+    padding: 12px 20px;
+    background-color: #000;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+}
