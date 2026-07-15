@@ -1,0 +1,1 @@
+export const MENU_API_URL = 'https://namastedev.com/api/v1/listRestaurantMenu/';
