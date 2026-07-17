@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 
 import { Link } from "react-router";
 
+import useOnlineStatus from "../utils/useOnlineStatus";
+
 const Body = () => {
 
   //Local State Variable - Super powerful variable
@@ -27,6 +29,12 @@ const Body = () => {
     setListedResturants(json?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     setFilteredResturants(json?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
+  }
+
+  const onlineStatus = useOnlineStatus();
+
+  if(onlineStatus === false) {
+    return <h1>Looks like you are offline please check your interner connection</h1>
   }
 
   return listedResturants.length === 0 ? <Shimmer/> : (
