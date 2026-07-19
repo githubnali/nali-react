@@ -1,4 +1,6 @@
-.heading-zero {
+@import "tailwindcss";
+
+/* .heading-zero {
     color: red;
     text-align: center;
 }
@@ -120,4 +122,4 @@ input {
     border: 1px solid;
     margin-bottom: 20px;
     padding: 20px;
-}
+} */

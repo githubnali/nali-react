@@ -18,36 +18,36 @@ const Header = () => {
     }, []);
     
     return (
-        <header className="header">
+        <header className="header flex justify-between bg-yellow-800 shadow-2xl">
             <div className="logo-container">
-                <img className="logo" src="https://media.istockphoto.com/id/1435983029/vector/food-delivery-logo-images.jpg?s=612x612&w=0&k=20&c=HXPxcjOxUiW4pMW1u9E0k2dJYQOU37a_0qZAy3so8fY="/>
+                <img className="logo w-28 h-auto" src="https://media.istockphoto.com/id/1435983029/vector/food-delivery-logo-images.jpg?s=612x612&w=0&k=20&c=HXPxcjOxUiW4pMW1u9E0k2dJYQOU37a_0qZAy3so8fY="/>
             </div>
             <div className="nav-items">
-                <ul>
-                    <li>
+                <ul className="flex">
+                    <li className="px-4">
                         Online Status: {onlineStatus ? "💚" : "❤️"}
                     </li>
-                    <li>
+                    <li className="px-4">
                         <Link to="/">
                             Home
                         </Link>
                     </li>
-                    <li>
+                    <li className="px-4">
                         <Link to="/about">
                             About US
                         </Link>
                     </li>
-                    <li>
+                    <li className="px-4">
                         <Link to="/contact">
                             Contact US
                         </Link>
                     </li>
-                    <li>
+                    <li className="px-4">
                         <Link to="/grocery">
                             Grocery
                         </Link>
                     </li>
-                    <li>Cart</li>
+                    <li className="px-4">Cart</li>
                     <button className="login-btn" onClick={() => {btnName === 'Login' ? setBtnName("Logout"):setBtnName("Login")}}>{btnName}</button>
                 </ul>
             </div>
